@@ -126,15 +126,7 @@ And a [Taverna Player](https://hub.docker.com/r/fbacall/taverna-player-portal/):
 
     docker run --name taverna-portal --link taverna-server:taverna -p 3000:3000 -d fbacall/taverna-player-portal
 
-Then edit [app/src/main/res/values/strings\_activity\_settings.xml](app/src/main/res/values/strings_activity_settings.xml) to set:
-
-
-```xml
-    <string name="pref_player_default"> http://example.com:3000/</string>   <!-- default value -->
-    <string name="pref_server_default"> http://example.com:8090/</string>   <!-- default value -->
-```
-
-.. where you= replace `example.com` with the hostname or IP address of your server running Docker. 
+Then when the app is running on your mobile device you can change the location of the taverna player and the username/password from within the `settings` page. You can also configure the myExperiment user details.
 
 Note that if you are using Docker on OS X or Windows, then a Virtual Machine will run the Docker
 containers under a different IP address. Use `docker-machine ip` to check. You may have to
